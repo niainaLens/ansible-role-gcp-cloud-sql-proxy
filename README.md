@@ -70,4 +70,4 @@ BSD
 Author Information
 ------------------
 
-Created by Niaina Lens, August 2019
+Created by [Niaina Lens](https://github.com/niainaLens), August 2019
