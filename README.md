@@ -10,8 +10,7 @@ Requirements
 - package "daemon" (if not exist, it's handled in tasks)
 - GCP CloudSQL instance where to connect
 - Enable API: 
-> Cloud SQL (sql-component.googleapis.com)
->
+> Cloud SQL (sql-component.googleapis.com)  
 > Cloud SQL Admin API (sqladmin.googleapis.com)
 
 Role Variables
