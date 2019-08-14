@@ -55,12 +55,14 @@ None.
 Example Playbook
 ----------------
 
-    - hosts: web-servers
-      vars:
-        cloud_sql_instance_connection_name: myGcpProject:us-central1:project-clousql
-        cloud_sql_proxy_tcp_port: 3306    
-      roles:
-         - cloud_sql_proxy
+```
+- hosts: web-servers
+  vars:
+    cloud_sql_instance_connection_name: myGcpProject:us-central1:project-clousql
+    cloud_sql_proxy_tcp_port: 3306    
+  roles:
+    - cloud_sql_proxy
+```
 
 License
 -------
