@@ -10,8 +10,9 @@ Requirements
 - package "daemon" (if not exist, it's handled in tasks)
 - GCP CloudSQL instance where to connect
 - Enable API: 
-  > Cloud SQL (sql-component.googleapis.com) 
-  > Cloud SQL Admin API (sqladmin.googleapis.com)
+> Cloud SQL (sql-component.googleapis.com)
+>
+> Cloud SQL Admin API (sqladmin.googleapis.com)
 
 Role Variables
 --------------
@@ -40,7 +41,7 @@ cloud_sql_instance_connection_name: <project_ID>:<region>:<instance_name>
 # cloud sql listening port
 # mysql: 3306
 # postgresql: 5432
-cloud_sql_proxy_tcp_port:** <port>
+cloud_sql_proxy_tcp_port: <port>
 ```
 ```
 # project credential file, if needed
