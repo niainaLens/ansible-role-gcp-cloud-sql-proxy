@@ -22,13 +22,15 @@ Role Variables
 
 - DEFAULTS
     
-    > \# URL for downloading cloud_sql_proxy
-    >
-> \# doc: https://cloud.google.com/sql/docs/mysql/sql-proxy?hl=fr
-    >
-    > **cloud_sql_proxy_download_url:** https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+    ```
+    # URL for downloading cloud_sql_proxy
+# doc: https://cloud.google.com/sql/docs/mysql/sql-proxy?hl=fr
+    cloud_sql_proxy_download_url: https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+    ```
     
-> \# working directory
+
+    
+    > \# working directory
     >
     > **cloud_sql_proxy_working_dir:** /usr/bin
     > **cloud_sql_proxy_install_path:** /usr/bin/cloud_sql_proxy
