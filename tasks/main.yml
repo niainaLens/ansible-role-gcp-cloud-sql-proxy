@@ -1,0 +1,38 @@
+---
+# tasks file for cloud_sql_proxy
+
+- name: Check if cloud_sql_proxy exists
+  stat:
+    path: /usr/bin/cloud_sql_proxy
+  register: stat_cloudSqlProxy
+
+- name: Install daemon package
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - daemon
+
+- name: Download cloud_sql_proxy & make executable
+  get_url:
+    url: "{{ cloud_sql_proxy_download_url }}"
+    dest: "{{ cloud_sql_proxy_install_path }}"
+    mode: 0755
+  when: stat_cloudSqlProxy.stat.exists == False
+
+- name: Create cloud_sql_proxy service
+  template:
+    src: cloud_sql_proxy.service.j2
+    dest: /lib/systemd/system/cloud_sql_proxy.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Reload systemd daemon
+    - Restart cloud_sql_proxy
+
+- name: Enable cloud_sql_proxy service
+  service:
+    name: cloud_sql_proxy.service
+    enabled: yes

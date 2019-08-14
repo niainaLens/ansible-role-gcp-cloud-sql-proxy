@@ -1,0 +1,11 @@
+---
+# handlers file for cloud_sql_proxy
+
+- name: Reload systemd daemon
+  systemd:
+    daemon_reload: yes
+
+- name: Restart cloud_sql_proxy
+  service:
+    name: cloud_sql_proxy
+    state: restarted

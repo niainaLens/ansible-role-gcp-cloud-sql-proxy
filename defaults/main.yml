@@ -1,0 +1,22 @@
+---
+# defaults file for cloud_sql_proxy
+
+# URL for downloading cloud_sql_proxy
+# doc: https://cloud.google.com/sql/docs/mysql/sql-proxy?hl=fr
+cloud_sql_proxy_download_url: https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+
+# CloudSQL Instance connection name:
+# project_ID:region:cloudSql_instance_name
+cloud_sql_instance_connection_name: []
+
+# working directory
+cloud_sql_proxy_working_dir: /usr/bin
+cloud_sql_proxy_install_path: /usr/bin/cloud_sql_proxy
+
+# cloud sql listening port
+# mysql: 3306
+# postgresql: 5432
+cloud_sql_proxy_tcp_port: []
+
+# project credential file
+cloud_sql_proxy_credential_file: []

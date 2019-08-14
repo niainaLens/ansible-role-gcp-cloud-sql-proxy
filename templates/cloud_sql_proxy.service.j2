@@ -1,0 +1,15 @@
+[Unit]
+Description=Google Cloud Compute Engine SQL Proxy
+After=syslog.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/usr/bin/daemon -n cloud_sql_proxy -- {{ cloud_sql_proxy_install_path }} -instances={{ cloud_sql_instance_connection_name }}=tcp:{{ cloud_sql_proxy_tcp_port }}
+ExecReload=/usr/bin/daemon -n cloud_sql_proxy --restart
+ExecStop=/usr/bin/daemon -n cloud_sql_proxy --stop
+Restart=always
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
