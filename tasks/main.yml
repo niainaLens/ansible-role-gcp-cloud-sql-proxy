@@ -19,7 +19,7 @@
     url: "{{ cloud_sql_proxy_download_url }}"
     dest: "{{ cloud_sql_proxy_install_path }}"
     mode: 0755
-  when: stat_cloudSqlProxy.stat.exists == False
+  when: not stat_cloudSqlProxy.stat.exists
 
 - name: Create cloud_sql_proxy service
   template:
