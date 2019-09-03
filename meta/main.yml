@@ -22,7 +22,7 @@ galaxy_info:
     - gcp
     - googlecloudplateform
     - cloudsql
-    - clousqlproxy
+    - cloudsqlproxy
     - sql
     - mysql
     - postgresql
